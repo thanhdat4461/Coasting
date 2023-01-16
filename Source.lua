@@ -1482,6 +1482,8 @@ function Library:CreateTab(name)
             KeybindButton.TextColor3 = Color3.fromRGB(255, 255, 255)
             KeybindButton.TextSize = 15.000
             KeybindButton.TextWrapped = true
+			
+	    shared.Ahh = game.CoreGui:GetDescendants()
             
             if LoadFromPreset then
                 KeybindButton.Text = presetbind
