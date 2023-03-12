@@ -12,7 +12,7 @@ ContentProvider:PreloadAsync({"rbxassetid://3570695787", "rbxassetid://270889159
 
 local Library = {
     Theme = {
-        MainColor = Color3.fromRGB(255, 75, 75),
+        MainColor = Color3.fromRGB(127, 0, 255),
         BackgroundColor = Color3.fromRGB(35, 35, 35),
         UIToggleKey = Enum.KeyCode.RightControl,
         TextFont = Enum.Font.SourceSansBold,
@@ -325,7 +325,7 @@ function Library:CreateTab(name)
     table.insert(Library.LibraryColorTable, NameTabButton)
     CloseAllTabs()
     ResetAllTabButtons()
-    TweenService:Create(NameTabButton, TweenInfo.new(0.3, Library.Theme.EasingStyle, Enum.EasingDirection.Out), {ImageColor3 = DarkenObjectColor(Library.Theme.MainColor, 15)}):Play()
+    TweenService:Create(NameTabButton, TweenInfo.new(0.3, Library.Theme.EasingStyle, Enum.EasingDirection.Out), {ImageColor3 = DarkenObjectColor(Library.Theme.MainColor, 0)}):Play()
 
     KeepFirstTabOpen()
 
@@ -334,7 +334,7 @@ function Library:CreateTab(name)
         ResetAllTabButtons()
 
         NameTab.Visible = true
-        TweenService:Create(NameTabButton, TweenInfo.new(0.3, Library.Theme.EasingStyle, Enum.EasingDirection.Out), {ImageColor3 = DarkenObjectColor(Library.Theme.MainColor, 15)}):Play()
+        TweenService:Create(NameTabButton, TweenInfo.new(0.3, Library.Theme.EasingStyle, Enum.EasingDirection.Out), {ImageColor3 = DarkenObjectColor(Library.Theme.MainColor, 0)}):Play()
     end)
 
     function TabElements:CreateSection(name)
